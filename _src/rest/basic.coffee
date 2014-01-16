@@ -1,3 +1,5 @@
+_ = require( "lodash" )
+
 module.exports = class BasicRest extends require( "../" ).Basic
 
 	constructor: ( @app, @name, @model )->
@@ -46,7 +48,6 @@ module.exports = class BasicRest extends require( "../" ).Basic
 	@api private
 	###
 	_error: ( res, err, statusCode = 500 )=>
-		
 		if _.isString( err )
 			if @_ERRORS[ err ]? and ( [ statusCode, msg ] = @_ERRORS[ err ] )
 				_err = 

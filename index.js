@@ -9,6 +9,8 @@
 
   module.exports.StatsManager = require('./lib/statsmanager');
 
+  module.exports.TimeSeries = require('./lib/timeseries');
+
   module.exports.utils = require('./lib/utils');
 
   module.exports.version = '0.0.1';
